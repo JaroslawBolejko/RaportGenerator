@@ -24,5 +24,10 @@ namespace RaportGenerator
         {
             InitializeComponent();
         }
+
+        private void generateRaport_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

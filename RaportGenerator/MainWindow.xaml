@@ -4,23 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RaportGenerator"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" FontSize="18"
+        Title="Ksero-Copy" Height="740" Width="1200">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20"></ColumnDefinition>
-            <ColumnDefinition Width="auto"></ColumnDefinition>
-            <ColumnDefinition Width="auto"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="20"></ColumnDefinition>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="30">Genarator Raportów Ilość Wydruków 1.0.0</TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="20" Grid.ColumnSpan="2">Genarator Raportów Ilość Wydruków 1.0.0</TextBlock>
+        <Button x:Name="raportHistory" FontSize="40" Content="Pokaż historie" Grid.Column="2" Grid.Row="2" Width="300" BorderThickness="2"/>
+        <Button x:Name="generateRaport" FontSize="40" Content="Generuj Raport" Grid.Column="4" Grid.Row="2" Width="300" BorderThickness="2"/>
     </Grid>
 </Window>
