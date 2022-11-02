@@ -25,7 +25,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="1" Grid.Row="1" FontSize="20" Grid.ColumnSpan="2">Genarator Raportów Ilość Wydruków 1.0.0</TextBlock>
-        <Button x:Name="raportHistory" FontSize="40" Content="Pokaż historie" Grid.Column="2" Grid.Row="2" Width="300" BorderThickness="2"/>
-        <Button x:Name="generateRaport" FontSize="40" Content="Generuj Raport" Grid.Column="4" Grid.Row="2" Width="300" BorderThickness="2"/>
+        <Button x:Name="raportHistory" FontSize="40" Content="Pokaż historie" Grid.Column="2" Grid.Row="2" Width="300" BorderThickness="2" Click="raportHistory_Click"/>
+        <Button x:Name="generateRaport" FontSize="40" Content="Generuj Raport" Grid.Column="4" Grid.Row="2" Width="300" BorderThickness="2" Click="generateRaport_Click"/>
     </Grid>
 </Window>

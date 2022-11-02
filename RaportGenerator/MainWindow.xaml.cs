@@ -27,7 +27,16 @@ namespace RaportGenerator
 
         private void generateRaport_Click(object sender, RoutedEventArgs e)
         {
+            GenerateRaport generateRaportWindow = new GenerateRaport();
+            generateRaportWindow.Show();
+            this.Close();
+        }
 
+        private void raportHistory_Click(object sender, RoutedEventArgs e)
+        {
+            RaportsHistory raportsHistoryWindow = new RaportsHistory();
+            raportsHistoryWindow.Show();
+            this.Close();
         }
     }
 }
