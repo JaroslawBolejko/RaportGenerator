@@ -9,6 +9,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
@@ -18,34 +19,45 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Załącznik nr</TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="1" FontSize="20" HorizontalAlignment="Center">Zmienna z kolejnym numerem</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="4" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Użytkownik</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="10" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Typ kopiarki</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="11" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Numer Fabryczny Urządzenia</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="12" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Numer Umowy</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="18" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Rodzaj Wydruku/Kopii</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="19" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Poprzedni Stan Licznika</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="20" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Bieżący Stan Licznika</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="21" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center">Ilosć Kopii/Wydruków</TextBlock>
 
     </Grid>
 </Window>
