@@ -9,7 +9,7 @@ namespace RaportGenerator.DataAccess
         public RaportGeneratorContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<RaportGeneratorContext>();
-            optionsBuilder.UseSqlServer(@"Data Source =.\; Initial Catalog = RaportGenerator; Integrated Security = True)");
+            optionsBuilder.UseSqlServer(@"Data Source =.\SQLEXPRESS01; Initial Catalog = RaportGenerator; Integrated Security = True)");
             return new RaportGeneratorContext(optionsBuilder.Options);
         }
     }
