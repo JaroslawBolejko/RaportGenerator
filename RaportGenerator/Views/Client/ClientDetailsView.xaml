@@ -1,0 +1,58 @@
+﻿<Window x:Class="RaportGenerator.Views.ClientDetailsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RaportGenerator.Views"
+        mc:Ignorable="d"
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}"  
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}"  
+        Title="Szczegółowe informacje o firmie" WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        ResizeMode="NoResize" FontSize="18" FontWeight="Bold" Background="#FF8EAFF7" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Nazwa firmy" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txtCompanyName" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Label Content="NIP" Grid.Row ="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txtCompanyTaxNumber" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <Label Content="Ulica" Grid.Row ="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txtCompanyStreet" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Label Content="Numer ulicy" Grid.Row ="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txtCompanyStreetNumber" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Label Content="Numer mieszkania" Grid.Row ="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txtCompanyApartmentNumber" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Label Content="Kod pocztowy" Grid.Row ="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txtCompanyZipCode" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Label Content="Miasto" Grid.Row ="6" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txtCompanyCity" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Label Content="Email" Grid.Row ="7" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txtCompanyEmail" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Label Content="Numer telefonu" Grid.Row ="8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txtCompanyTelefonNumber" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Label Content="Numer konta bankowego" Grid.Row ="9" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txtCompanyAccountNumber" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Label Content="Umowy" Grid.Row ="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txtCompanyContracts" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Label Content="Urządzenia" Grid.Row ="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="txtCompanyDevices" Grid.Column="1" Grid.Row="11" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Button x:Name="btnClose" Content="Zamkinj" Grid.Column="1" Grid.Row="12" Width="100" Margin="0,0,50,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnClose_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,125 @@
+﻿<Window x:Class="RaportGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RaportGenerator"
+        xmlns:views="clr-namespace:RaportGenerator.Views"
+        xmlns:viewmodels="clr-namespace:RaportGenerator.ViewModels"
+        mc:Ignorable="d"
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}"  
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        Title="Ksero-Copy 1.0.0"
+        Name="KseroMainWindow"
+        WindowStartupLocation="CenterScreen"
+        FontSize="24"
+        FontWeight="Bold"
+        Background="#FF8EAFF7"
+        ResizeMode="NoResize"
+        WindowState="Maximized"
+        Closed="MainWindow_Closed"
+        Loaded="MainWindow_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ContentControl Content="{Binding}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="8" Height="Auto" FontWeight="Normal" Width="Auto"/>
+        <Label x:Name="lblWindowName" Content="" Grid.Column="1" HorizontalAlignment="Center" Margin="212,10,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <StackPanel Grid.Row="1" Margin="0,2,0,0">
+            <Button Name="btnClient" Height="60" Width="250" HorizontalAlignment="Left" Click="btnClient_Click" Margin="0,10,0,0">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="ClientImage" HorizontalAlignment="Left" Height="Auto" Width="73" Margin="0,0,0,0" Source="Images/group_554724.png"/>
+                    <TextBlock Text="Klienci" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button Name="btnDevice" Height="60" Width="250" HorizontalAlignment="Left" Click="btnDevice_Click" Margin="0,10,0,0">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="DeviceImage" HorizontalAlignment="Left" Height="Auto" Width="73" Margin="0,0,0,0" Source="Images/computer_3067260.png"/>
+                    <TextBlock Text="Urządzenia" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button Name="btnReport" Height="60" Width="250" HorizontalAlignment="Left" Click="btnReport_Click" Margin="0,10,0,0">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="InvoiceImage" HorizontalAlignment="Left" Height="Auto" Width="73" Margin="0,0,0,0" Source="Images/budget_781902.png"/>
+                    <TextBlock Text="Raporty" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button Name="btnContract" Height="60" Width="250" HorizontalAlignment="Left" Click="btnContract_Click" Margin="0,10,0,0">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="ContractImage" HorizontalAlignment="Left" Height="Auto" Width="73" Margin="0,0,0,0" Source="Images/doc-file_8586199.png"/>
+                    <TextBlock Text="Umowy" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button Name="btnHistory" Height="60" Width="250" HorizontalAlignment="Left" Click="btnHistory_Click" Margin="0,10,0,0">
+                <Grid Width="230">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image x:Name="HistoryImage" HorizontalAlignment="Left" Height="Auto" Width="73" Margin="0,0,0,0" Source="Images/history.png"/>
+                    <TextBlock Text="Historia" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
+            <Button x:Name="btnReportHistory" Height="60" Width="220" HorizontalAlignment="Stretch" Margin="0,10,0,0" Visibility="Collapsed" Click="btnReportHistory_Click">
+                <TextBlock Text="Historia raportów" TextAlignment="Left" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Center"/>
+            </Button>
+            <Button x:Name="btnContractHistoryOnly" Height="60" Width="220" HorizontalAlignment="Stretch" Margin="0,10,0,0" Visibility="Collapsed" Click="btnContractHistory_Click">
+                <TextBlock Text="Historia umów" TextAlignment="Left" HorizontalAlignment="Left" FontSize="16" VerticalAlignment="Center"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+    <Window.Resources>
+        <DataTemplate x:Name="ClientTemplate" DataType="{x:Type viewmodels:ClientViewModel}">
+            <views:ClientListView>
+            </views:ClientListView>
+        </DataTemplate>
+        <DataTemplate x:Name="DeviceTemplate" DataType="{x:Type viewmodels:DeviceViewModel}">
+            <views:DeviceListView>
+            </views:DeviceListView>
+        </DataTemplate>
+        <DataTemplate x:Name="ReportTemplate" DataType="{x:Type viewmodels:ReportViewModel}">
+            <views:ReportListView>
+            </views:ReportListView>
+        </DataTemplate>
+        <DataTemplate x:Name="ContractTemplate" DataType="{x:Type viewmodels:ContractViewModel}">
+            <views:ContractListView>
+            </views:ContractListView>
+        </DataTemplate>
+        <DataTemplate x:Name="ContractHistoryTemplate" DataType="{x:Type viewmodels:ContractHistoryViewModel}">
+            <views:ContractHistoryListView>
+            </views:ContractHistoryListView>
+        </DataTemplate>
+        <DataTemplate x:Name="ReportHistoryTemplate" DataType="{x:Type viewmodels:ReportHistoryViewModel}">
+            <views:ReportHistoryListView>
+            </views:ReportHistoryListView>
+        </DataTemplate>
+    </Window.Resources>
+</Window>

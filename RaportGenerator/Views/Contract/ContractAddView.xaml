@@ -1,0 +1,58 @@
+﻿<Window x:Class="RaportGenerator.Views.ContractAddView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RaportGenerator.Views"
+        mc:Ignorable="d"
+        Title="Dodaj umowe"
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}"  
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" 
+        FontSize="18" FontWeight="Bold" Background="#FF8EAFF7" 
+        WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Nazwa umowy" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtContractName" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" FlowDirection="LeftToRight"/>
+        <Label Content="Numer umowy" Grid.Row ="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtContractNumber" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <Label Content="Data zawarcia umowy" Grid.Row ="2" HorizontalAlignment="Center" VerticalAlignment="Center" FlowDirection="LeftToRight"/>
+        <DatePicker x:Name="datePicker" Grid.Row="2" Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" />
+        <Label Content="Warunki umowy" Grid.Row ="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtTerm" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" FlowDirection="LeftToRight"/>
+        <Label Content="Nazwa klienta" Grid.Row ="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ComboBox Name="companySearchBox" IsEditable="True" TextSearch.TextPath="CompanyName"
+                  IsTextSearchEnabled="True" StaysOpenOnEdit="True" SelectionChanged="CompanySearchBox_SelectionChanged" Grid.Row ="4" Grid.Column="1" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding CompanyName}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <Label Content="Urządzenia" Grid.Row ="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ListBox x:Name="devicesListBox" Grid.Row="5" Grid.Column="1" ItemsSource="{Binding _devices}" Background="Transparent" BorderBrush="Transparent">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Content="{Binding DeviceDisplayName}" IsChecked="{Binding IsSelected, Mode=TwoWay}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="btnSave" Content="Zapisz" Grid.Column="1" Grid.Row="6" Width="100" Margin="450,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnSave_Click"/>
+        <Button x:Name="btnClose" Content="Zamkinj" Grid.Column="1" Grid.Row="6" Width="100" Margin="0,0,450,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnClose_Click"/>
+    </Grid>
+</Window>
