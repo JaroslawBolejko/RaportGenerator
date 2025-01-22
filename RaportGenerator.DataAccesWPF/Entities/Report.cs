@@ -8,7 +8,6 @@ namespace RaportGenerator.DataAccess.Entities
     {
         public int? DeviceId { get; set; }
         public int? CompanyId { get; set; }
-       // public string CompanyName { get; set; }
            
         [MaxLength(50)]
         public string Name { get; set; } = "Raport Wydruków";
@@ -35,12 +34,6 @@ namespace RaportGenerator.DataAccess.Entities
         [Required]
         public int CurrentPrintsStateColor { get; set; }
         
-        //[Required]
-        //public int BlackPrintsAmount { get; set; }
-        
-        //[Required]
-        //public int ColorPrintsAmount { get; set; }
-
         [ForeignKey("DeviceId")]
         public Device Device { get; set; }
 

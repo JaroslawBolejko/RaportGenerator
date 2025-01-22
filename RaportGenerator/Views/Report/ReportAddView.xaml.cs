@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query;
 using RaportGenerator.DataAccess;
 using RaportGenerator.DataAccess.Entities;
 using RaportGenerator.Models;
@@ -9,7 +8,6 @@ using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 
 namespace RaportGenerator.Views
 {
@@ -89,7 +87,6 @@ namespace RaportGenerator.Views
                 return "Najpierw wybierz urządzenie!";
             }
 
-            //  return color ? _selectedDevice.ColorPrintCounter.ToString() : _selectedDevice.BlackWhitePrintCounter.ToString();
             if (_lastReport == null)
             {
                 return "0";
@@ -104,9 +101,8 @@ namespace RaportGenerator.Views
             if (validateIncomingData())
             {
                 using RaportGeneratorContext db = new();
-                Report reportToAdd = new()
+                DataAccess.Entities.Report reportToAdd = new()
                 {
-                    //CompanyName = txtCompanyName.Text,
                     Number = txtRaportNumber.Text,
                     DateOfDocument = datePicker.SelectedDate.Value,
                     ReportForMonth = cmbReportMonth.Text,
@@ -118,16 +114,6 @@ namespace RaportGenerator.Views
                     CurrentPrintsStateColor = int.Parse(txtCurrentStateColor.Text)
                 };
 
-                //Device deviceToUpdate = new()
-                //{
-                //    Id = _selectedDevice.Id,
-                //    DeviceName = _selectedDevice.DeviceName,
-                //    SerialNumber = _selectedDevice.SerialNumber,
-                //    //ColorPrintCounter = int.Parse(txtCurrentStateColor.Text),
-                //    //BlackWhitePrintCounter = int.Parse(txtCurrentStateBlack.Text),
-                //};
-
-                // db.Devices.Update(deviceToUpdate);
                 db.Reports.Add(reportToAdd);
                 db.SaveChanges();
                 MessageBox.Show("Dodanie raportu zakończone sukcesem!");

@@ -1,9 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RaportGenerator.DataAccess;
 using RaportGenerator.Models;
-using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Windows;
 
@@ -58,8 +56,6 @@ namespace RaportGenerator.Views
         {
             if (CurrentReport.Id > 1)
             {
-                //Tu jest bug do nuprawy trzeba z devica sciagąć
-                //var preLastReport = AllReports.SkipLast(1).Last();
                 return (CurrentReport.PrevPrintsStateBlack, CurrentReport.PrevPrintsStateColor);
             }
             else
