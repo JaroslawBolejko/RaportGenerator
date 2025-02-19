@@ -29,26 +29,27 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Raport za miesiąc" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Nazwa kontrahenta"  Grid.Row ="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Numer Raportu" Grid.Row ="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Nazwa Urządzenia" Grid.Row ="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Numer Seryjny" Grid.Row ="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Numer umowy" Grid.Row ="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Poprzedni stan" Grid.Row ="7" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Stan bieżący" Grid.Row ="8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Liczba wydruków" Grid.Row ="9" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Raport sporządził" Grid.Row ="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Label Content="Data Sporzadzenia raportu" Grid.Row ="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="txtReportMonth" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
-        <TextBlock x:Name="txtClientName" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
-        <TextBlock x:Name="txtRaportNumber" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-        <TextBlock x:Name="txtDeviceName" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
-        <TextBlock x:Name="txtDeviceSerialNumber" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
-        <TextBlock x:Name="txtContractNumber" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <Label Content="Raport za miesiąc" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <Label Content="Nazwa kontrahenta"  Grid.Row ="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <Label Content="Numer Raportu" Grid.Row ="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <Label Content="Nazwa Urządzenia" Grid.Row ="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <Label Content="Numer Seryjny" Grid.Row ="4" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <Label Content="Numer umowy" Grid.Row ="5" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <Label Content="Poprzedni stan" Grid.Row ="7" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <Label Content="Stan bieżący" Grid.Row ="8" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <Label Content="Liczba wydruków" Grid.Row ="9" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <Label Content="Raport sporządził" Grid.Row ="10" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <Label Content="Data Sporzadzenia raportu" Grid.Row ="11" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        <ComboBox x:Name="cmbReportMonth" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="300"/>
+        <TextBox x:Name="txtClientName" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBox x:Name="txtRaportNumber" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtDeviceName" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBox x:Name="txtDeviceSerialNumber" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBox x:Name="txtContractNumber" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
         <Grid Grid.Column="1" Grid.Row="6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -63,8 +64,8 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <TextBlock x:Name="txtPrevStateBlack" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
-            <TextBlock x:Name="txtPrevStateColor" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            <TextBox x:Name="txtPrevStateBlack" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            <TextBox x:Name="txtPrevStateColor" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
         </Grid>
 
         <Grid Grid.Column="1" Grid.Row="8">
@@ -72,8 +73,8 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <TextBlock x:Name="txtCurrentStateBlack" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
-            <TextBlock x:Name="txtCurrentStateColor" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            <TextBox x:Name="txtCurrentStateBlack" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            <TextBox x:Name="txtCurrentStateColor" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
         </Grid>
 
         <Grid Grid.Column="1" Grid.Row="9">
@@ -81,12 +82,35 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <TextBlock x:Name="txtCurrentPrintCounterBlack" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
-            <TextBlock x:Name="txtCurrentPrintCounterColor" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            <TextBox x:Name="txtCurrentPrintCounterBlack" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
+            <TextBox x:Name="txtCurrentPrintCounterColor" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
         </Grid>
-        <TextBlock x:Name="txtRaportOwner" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
-        <TextBlock x:Name="txtDateOfService" Grid.Column="1" Grid.Row="11" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBox x:Name="txtRaportOwner" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <DatePicker x:Name="dpDateOfService" Grid.Row="11" Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" SelectedDate="{Binding ReportModel.ReportDocumentDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBox x:Name="PART_TextBox"
+                           Text="{Binding Path=SelectedDate, RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}, StringFormat='dd/MM/yyyy', Mode=TwoWay}" 
+                           Background="{TemplateBinding Background}"
+                           BorderThickness="0"
+                           Foreground="{TemplateBinding Foreground}"
+                           HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                           VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
         <Button x:Name="btnClose" Content="Zamkinj" Grid.Column="1" Grid.Row="12" Width="100" Margin="0,0,50,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnClose_Click"/>
         <Button x:Name="btnSave" Content="Zapisz"  Grid.Row="12" Width="100" Margin="0,0,50,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnSave_Click"/>
     </Grid>
+    <Window.Resources>
+        <Style TargetType="{x:Type DatePicker}">
+            <Setter Property="Language" Value="en-GB"/>
+        </Style>
+    </Window.Resources>
 </Window>
