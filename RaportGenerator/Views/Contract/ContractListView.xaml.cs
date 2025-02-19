@@ -80,7 +80,7 @@ namespace RaportGenerator.Views
                     ContractId = item.ContractId,
                     Name = item.ContractName,
                     Number = item.ContractNumber,
-                    ContractDate = item.ContractDate.ToString("MM.dd.yyyy"),
+                    ContractDate = item.ContractDate.ToString("dd.MM.yyyy"),
                     Term = item.Term,
                     IsValid = item.IsValid,
                     ContractDevices = item.ContractDevices,

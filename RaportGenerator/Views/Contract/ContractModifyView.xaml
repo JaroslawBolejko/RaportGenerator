@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Width="{x:Static SystemParameters.PrimaryScreenWidth}"  
         Height="{x:Static SystemParameters.PrimaryScreenHeight}"
-        Title="Dodaj umowe" 
+        Title="Edytuj umowę" 
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize" 
         FontSize="18" FontWeight="Bold" Background="#FF8EAFF7" 
         WindowState="Maximized" Loaded="Window_Loaded">
@@ -52,4 +52,9 @@
         <Button x:Name="btnClose" Content="Zamkinj" Grid.Row="14" Grid.Column="1" Width="100" Margin="0,0,50,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnClose_Click"/>
         <Button x:Name="btnSave" Content="Zapisz" Grid.Row="14" Width="100" Margin="0,0,50,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnSave_Click"/>
     </Grid>
+    <Window.Resources>
+        <Style TargetType="{x:Type DatePicker}">
+            <Setter Property="Language" Value="en-GB"/>
+        </Style>
+    </Window.Resources>
 </Window>
