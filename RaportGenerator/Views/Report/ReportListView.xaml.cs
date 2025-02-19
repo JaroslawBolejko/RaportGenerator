@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using RaportGenerator.DataAccess;
 using RaportGenerator.DataAccess.Entities;
 using RaportGenerator.Models;
+using RaportGenerator.Views.Report;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
@@ -122,14 +123,14 @@ namespace RaportGenerator.Views
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            //DeviceModel deviceModel = (DeviceModel)gridDevices.SelectedItem;
-            //if (deviceModel != null && deviceModel.Id != 0)
-            //{
-            //    DeviceModifyView page = new DeviceModifyView();
-            //    page.device = deviceModel;
-            //    page.ShowDialog();
-            //    FillGrid();
-            //}
+            ReportModel reportModel = (ReportModel)gridReports.SelectedItem;
+            if (reportModel != null && reportModel.Id != 0)
+            {
+                ReportModifyView page = new ReportModifyView();
+                page.report = reportModel;
+                page.ShowDialog();
+                FillGrid();
+            }
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
