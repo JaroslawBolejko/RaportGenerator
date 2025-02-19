@@ -18,6 +18,16 @@ namespace RaportGenerator.Views
         }
 
         public ContractModel contract;
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (contract != null && contract.ContractId != 0)
+            {
+                txtContractName.Text = contract.Name;
+                datePicker.DataContext = new { ContractModel = new ContractModel { ContractDate = contract.ContractDate } };
+                txtTerm.Text = contract.Term;
+            }
+        }
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -71,16 +81,6 @@ namespace RaportGenerator.Views
             }
 
             return false;
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (contract != null && contract.ContractId != 0)
-            {
-                txtContractName.Text = contract.Name;
-                datePicker.DataContext = new { ContractModel = new ContractModel { ContractDate = contract.ContractDate } };
-                txtTerm.Text = contract.Term;
-            }
         }
     }
 }
